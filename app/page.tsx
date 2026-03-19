@@ -10,9 +10,6 @@ export default async function Home() {
   return (
     <>
       <HeroSection />
-      <Integrations />
-      <PricingTable subscriptionDetails={subscriptionDetails} />
-      <FooterSection />
     </>
   );
 }
