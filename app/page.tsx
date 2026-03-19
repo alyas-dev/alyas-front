@@ -10,6 +10,7 @@ export default async function Home() {
   return (
     <>
       <HeroSection />
+      <p>gros zgeg</p>
     </>
   );
 }
