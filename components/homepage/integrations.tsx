@@ -1,8 +1,6 @@
 import {
   Shadcnui,
   TailwindCSS,
-  BetterAuth,
-  Polar,
   NeonPostgres,
   Nextjs,
 } from "@/components/logos";
@@ -34,27 +32,19 @@ export default function Integrations() {
             </IntegrationCard>
 
             <IntegrationCard
-              title="Better Auth"
-              description="Modern authentication library with session management, OAuth providers, and security features."
-              link="https://better-auth.com"
+              title="NestJS"
+              description="A progressive Node.js framework for building efficient, reliable, and scalable server-side applications."
+              link="https://nestjs.com"
             >
-              <BetterAuth />
+              <div className="text-2xl font-bold text-red-500">Nest</div>
             </IntegrationCard>
 
             <IntegrationCard
-              title="Neon Postgres"
-              description="Serverless PostgreSQL database with branching, autoscaling, and modern developer experience."
-              link="https://neon.tech"
+              title="PostgreSQL"
+              description="The world's most advanced open source relational database with modern developer experience."
+              link="https://www.postgresql.org"
             >
               <NeonPostgres />
-            </IntegrationCard>
-
-            <IntegrationCard
-              title="Polar.sh"
-              description="Developer-first subscription platform with webhooks, customer portal, and usage-based billing."
-              link="https://polar.sh"
-            >
-              <Polar />
             </IntegrationCard>
 
             <IntegrationCard
