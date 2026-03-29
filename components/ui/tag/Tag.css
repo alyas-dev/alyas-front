@@ -1,0 +1,48 @@
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-xl);
+    background-color: var(--neutral-light-grey);
+    color: var(--neutral-black);
+    width: fit-content;
+}
+
+.tag.white {
+    background-color: var(--neutral-light-grey);
+    color: var(--neutral-black);
+}
+
+.tag.black {
+    background-color: var(--neutral-black);
+    color: var(--neutral-light-grey);
+}
+
+.tag.green {
+    background-color: var(--accent-green-light);
+    color: var(--accent-green-dark);
+}
+
+
+.tag.yellow {
+    background-color: var(--accent-yellow-light);
+    color: var(--accent-yellow-dark);
+}
+
+.tag.blue {
+    background-color: var(--accent-blue-light);
+    color: var(--accent-blue-dark);
+}
+
+.tag.pink {
+    background-color: var(--accent-pink-light);
+    color: var(--accent-pink-dark);
+}
+
+.tag.small {
+    padding: var(--spacing-xs) var(--spacing-s) calc(var(--spacing-xs) + 1px) var(--spacing-s);
+}
+
+.tag.medium {
+    padding: var(--spacing-xs) var(--spacing-sm) calc(var(--spacing-xs) + 1px) var(--spacing-sm);
+}

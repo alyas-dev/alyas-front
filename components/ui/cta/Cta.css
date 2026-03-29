@@ -1,0 +1,77 @@
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-s);
+    width: fit-content;
+    transition: box-shadow 200ms ease-in-out, background-color 250ms ease-in-out;
+}
+
+.cta.xs {
+    border-radius: var(--radius-s);
+    padding: var(--spacing-sm);
+}
+
+.cta.s {
+    border-radius: var(--radius-s);
+    padding: var(--spacing-m);
+}
+
+.cta.m {
+    border-radius: var(--radius-m);
+    padding: var(--spacing-m) var(--spacing-l);
+}
+
+.cta.white {
+    background-color: var(--neutral-white);
+    color: var(--neutral-black);
+    box-shadow: inset 0 0 0 0px var(--neutral-grey);
+}
+
+.cta.black {
+    background-color: var(--neutral-black);
+    color: var(--neutral-white);
+}
+
+.cta.light-grey {
+    background-color: var(--neutral-light-grey);
+    color: var(--neutral-black);
+}
+
+.cta.transparent {
+    background-color: none;
+    color: var(--neutral-black);
+    box-shadow: inset 0 0 0 1px var(--neutral-grey);
+}
+
+.cta-icon {
+    width: 12px;
+    height: 12px;
+    background-color: currentColor;
+}
+
+.cta-icon.cross {
+    mask-image: url("./cross.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url("./cross.svg");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+}
+
+.cta.white:hover {
+    /* Shorthand: [inset] | offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: inset 0 0 0 1px var(--neutral-grey);
+}
+
+.cta.black:hover {
+    background-color: var(--neutral-black-hover);
+}
+
+.cta.light-grey:hover {
+    background-color: var(--neutral-grey);
+}
+
+.cta.transparent:hover {
+    box-shadow: inset 0 0 0 1px var(--neutral-dark-grey);
+}
