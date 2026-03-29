@@ -4,24 +4,30 @@ import CTA from "../components/ui/cta/Cta";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Kit - Launch Your SAAS",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  ),
+  title: "alyas",
   description:
-    "A modern, full-stack Next.js starter kit with authentication, payments, and dashboard. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
+    "Votre solution de devis et facturation",
+  icons: {
+    icon: "/assets/images/Favicon.svg",
+  },
   openGraph: {
-    title: "Next.js Starter Kit",
+    title: "alyas",
     description:
-      "A modern, full-stack Next.js starter kit with authentication, payments, and dashboard. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-    url: "nextstarter.xyz",
-    siteName: "Next.js Starter Kit",
+      "Votre solution de devis et facturation",
+    url: "alyas.fr",
+    siteName: "alyas",
     images: [
       {
-        url: "https://jdj14ctwppwprnqu.public.blob.vercel-storage.com/nsk-w9fFwBBmLDLxrB896I4xqngTUEEovS.png",
+        url: "/assets/images/OpenGraph.jpg",
         width: 1200,
-        height: 630,
-        alt: "Next.js Starter Kit",
+        height: 631,
+        alt: "alyas, votre solution de devis et facturation",
       },
     ],
-    locale: "en-US",
+    locale: "fr-FR",
     type: "website",
   },
 };
