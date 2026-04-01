@@ -1,0 +1,52 @@
+.FieldPlaceHolderTop {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 52px;
+    gap: 2px;
+    border-radius: var(--radius-s);
+    background-color: var(--neutral-light-grey);
+    padding: var(--spacing-sm) var(--spacing-m) var(--spacing-sm) var(--spacing-m);
+    transition: box-shadow 200ms ease-in-out;
+    box-shadow: inset 0 0 0 0px var(--neutral-grey);
+}
+
+.field-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0px;
+    overflow: visible;
+}
+
+.field-label-center {
+    position: absolute;
+    left: var(--spacing-m);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+    color: var(--neutral-dark-grey);
+}
+
+
+/*transformation du label lorsque l'on remplit l'input ou que l'on clique dessus*/
+.FieldPlaceHolderTop:has(.field-input:focus, .field-input:hover, .field-input:not(:placeholder-shown)) .field-label-center {
+    top: 8px;
+    font-size: 12px;
+    transform: translateY(0);
+}
+
+.FieldPlaceHolderTop:has(.field-input:focus, .field-input:hover, .field-input:not(:placeholder-shown)) .field-input {
+    padding-top: 14px;
+}
+
+
+/*Style quand champ est sélectionné ou survolé*/
+.FieldPlaceHolderTop:hover,
+.FieldPlaceHolderTop:focus,
+.FieldPlaceHolderTop:focus-within {
+    box-shadow: inset 0 0 0 1px var(--neutral-grey);
+}

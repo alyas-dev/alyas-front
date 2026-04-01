@@ -13,8 +13,8 @@ export default function FieldPlaceHolderTop({ children, className }: FieldPlaceH
 
     return (
         <div className={classNames}>
-            <label htmlFor="name" className="field-label">{children}</label>
             <input type="text" id="name" placeholder=" " className="field-input" />
+            <label htmlFor="name" className="field-label-center">{children}</label>
         </div>
     );
 }

@@ -3,7 +3,8 @@ import "../globals.css";
 import "./sign-up.css";
 import Image from 'next/image';
 import Link from 'next/link';
-import FieldPlaceHolderTop from "@/components/field-placeholder-top/FieldPlaceHolderTop";
+import FieldPlaceHolderTop from "@/components/ui/field-placeholder-top/FieldPlaceHolderTop";
+import FieldPassword from "@/components/ui/field-password/FieldPassword";
 
 export default function SignUp() {
   return (
@@ -48,7 +49,7 @@ export default function SignUp() {
             <FieldPlaceHolderTop className="body-s">Votre nom</FieldPlaceHolderTop>
           </div>
           <FieldPlaceHolderTop className="body-s">Votre email</FieldPlaceHolderTop>
-          <input type="password" placeholder="Votre mot de passe" className="body-s"></input>
+          <FieldPassword className="body-s">Choisissez un mot de passe</FieldPassword>
         </div>
         <Cta color="black" size="m" className="w-full">Je m’inscris</Cta>
       </form>
