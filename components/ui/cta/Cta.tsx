@@ -1,5 +1,6 @@
 import "./Cta.css";
 import { Children } from "react";
+import { cn } from "@/lib/utils";
 
 type CTAVariants = "white" | "black" | "light-grey" | "transparent";
 type CTASizes = "xs" | "s" | "m";
@@ -10,9 +11,10 @@ interface CTAProps {
     color?: CTAVariants;
     size?: CTASizes;
     icon?: CTAIcon;
+    className?: string;
 }
 
-export default function CTA({ children, color = "white", size = "xs", icon = "" }: CTAProps) {
+export default function Cta({ children, color = "white", size = "xs", icon = "", className }: CTAProps) {
 
     const fontSizeMap = {
         xs: "h7",
@@ -20,12 +22,12 @@ export default function CTA({ children, color = "white", size = "xs", icon = "" 
         m: "h6"
     };
 
-    const classNames = `cta ${color} ${size} ${fontSizeMap[size]}`;
+    const classNames = cn("cta", color, size, fontSizeMap[size], className);
 
     return (
         <div className={classNames}>
             <span>{children}</span>
-            {icon !== "" && <div className={`cta-icon ${icon}`} aria-hidden="true" />}
+            {icon !== "" && <div className={`cta - icon ${icon} `} aria-hidden="true" />}
         </div>
     );
 }

@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     gap: var(--spacing-s);
-    width: fit-content;
     transition: box-shadow 200ms ease-in-out, background-color 250ms ease-in-out;
 }
 

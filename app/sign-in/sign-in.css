@@ -1,0 +1,11 @@
+.sign-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: var(--spacing-s);
+    gap: var(--spacing-s);
+    max-width: 1440px;
+    margin: 0 auto;
+}

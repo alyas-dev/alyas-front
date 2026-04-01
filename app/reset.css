@@ -9,6 +9,10 @@
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     -webkit-font-smoothing: antialiased;
 }

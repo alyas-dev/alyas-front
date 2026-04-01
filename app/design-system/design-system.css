@@ -1,0 +1,5 @@
+.design-system {
+    display: flex;
+    flex-flow: column wrap;
+    gap: var(--spacing-m);
+}

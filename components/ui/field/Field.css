@@ -1,0 +1,27 @@
+.field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: var(--radius-s);
+    padding: var(--spacing-sm);
+    background-color: var(--neutral-light-grey);
+    color: var(--neutral-dark-grey);
+}
+
+.input {
+    border: none;
+    background-color: transparent;
+    color: var(--neutral-dark-grey);
+    outline: none;
+    width: 100%;
+}
+
+.input:focus {
+    color: var(--neutral-dark-grey);
+}
+
+.input::selection {
+    background-color: var(--accent-blue);
+    color: var(--neutral-dark-grey);
+}
