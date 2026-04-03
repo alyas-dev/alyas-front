@@ -1,9 +1,8 @@
 import Tag from "../components/ui/tag/Tag";
-import "./globals.css";
+import "./global.css";
 import CTA from "../components/ui/cta/Cta";
 import Field from "../components/ui/field/Field";
 import { Metadata } from "next";
-import SignIn from "./sign-in/page";
 
 export const metadata: Metadata = {
   metadataBase: new URL(

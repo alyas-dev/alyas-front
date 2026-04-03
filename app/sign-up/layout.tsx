@@ -1,4 +1,4 @@
-import "../globals.css";
+import "../global.css";
 import "./sign-up.css";
 import Image from 'next/image';
 

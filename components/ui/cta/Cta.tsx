@@ -14,7 +14,7 @@ interface CTAProps {
     className?: string;
 }
 
-export default function Cta({ children, color = "white", size = "xs", icon = "", className }: CTAProps) {
+export default function Cta({ children, color = "white", size = "xs", icon = "", className, ...props }: CTAProps) {
 
     const fontSizeMap = {
         xs: "h7",
@@ -25,9 +25,9 @@ export default function Cta({ children, color = "white", size = "xs", icon = "",
     const classNames = cn("cta", color, size, fontSizeMap[size], className);
 
     return (
-        <div className={classNames}>
+        <button {...props} className={classNames}>
             <span>{children}</span>
             {icon !== "" && <div className={`cta - icon ${icon} `} aria-hidden="true" />}
-        </div>
+        </button>
     );
 }

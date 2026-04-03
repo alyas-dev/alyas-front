@@ -7,9 +7,10 @@ import { Eye, EyeClosed } from "@phosphor-icons/react";
 interface FieldPasswordProps {
     children?: React.ReactNode;
     className?: string;
+    showPasswordStrenght?: boolean;
 }
 
-export default function FieldPassword({ children, className }: FieldPasswordProps) {
+export default function FieldPassword({ children, className, showPasswordStrenght = true }: FieldPasswordProps) {
     const classNames = cn("FieldPassword", className);
     const strokeDasharray = 44; /*Calcul de la valeur du cercle password strength*/
 
@@ -58,10 +59,12 @@ export default function FieldPassword({ children, className }: FieldPasswordProp
         <div className={classNames}>
             <input type={inputType} placeholder={children as string} className="field-input" value={password} onChange={handlePasswordChange} />
             <div className="password-strength-and-toggle-container">
-                <svg width="16" height="16" viewBox="0 0 16 16">
-                    <circle cx="8px" cy="8px" r="7px" fill='none' strokeWidth="2" stroke="var(--neutral-grey)" className="password-strength-circle" strokeDasharray="80" />
-                    <circle cx="8px" cy="8px" r="7px" fill='none' strokeWidth="2" stroke={strokeColor} className="password-strength-circle" strokeDasharray="44" strokeDashoffset={strokeDashoffset} strokeLinecap="round" transform="rotate(-90 8 8)" />
-                </svg>
+                {showPasswordStrenght && (
+                    <svg width="16" height="16" viewBox="0 0 16 16">
+                        <circle cx="8px" cy="8px" r="7px" fill='none' strokeWidth="2" stroke="var(--neutral-grey)" className="password-strength-circle" strokeDasharray="80" />
+                        <circle cx="8px" cy="8px" r="7px" fill='none' strokeWidth="2" stroke={strokeColor} className="password-strength-circle" strokeDasharray="44" strokeDashoffset={strokeDashoffset} strokeLinecap="round" transform="rotate(-90 8 8)" />
+                    </svg>
+                )}
                 <button
                     aria-label={showPassword ? "Masquer le mot de passe" : "Afficher le mot de passe"}
                     className="password-toggle"

@@ -1,4 +1,4 @@
-import "../globals.css";
+import "../global.css";
 import Tag from "../../components/ui/tag/Tag";
 import CTA from "../../components/ui/cta/Cta";
 import Field from "../../components/ui/field/Field";
